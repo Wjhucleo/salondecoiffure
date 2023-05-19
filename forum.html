@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forum.css">
+    <title>s'enregistrer</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img
+          src="C:\Users\mariam\Downloads\1684513451945 (2).png" alt="I&M"
+        />
+    </div>
+
+    <form id="signup-form">
+        <div class="input-field">
+            <label for="nom">Nom :</label>
+            <input id="nom" type="text" placeholder="Nom">
+        </div>
+        <div class="input-field">
+            <label for="prenom">Prenom :</label>
+            <input id="prenom" type="text" placeholder="Prenom">
+        </div>
+        <div class="input-field">
+            <label for="email">E-mail :</label>
+            <input id="email" type="email" placeholder="@gmail.com" required>
+        </div>
+        <div class="input-field">
+            <label for="motpass">Mot de Passe :</label>
+            <input id="motpass" type="password" placeholder="Mot de Passe" required>
+        </div>
+            <input type="checkbox" onclick="showPass()"> Show Password
+        <div>
+            <span id="s1" style="color: #29a396;"></span>
+        </div>
+            <button onclick="add()" type="submit">Connecter</button>
+    </form>
+
+    <script>
+        function add(){
+            document.getElementById('s1').innerHTML = '';
+            var passValue = document.getElementById('motpass').value;
+
+            if(passValue.length < 8){
+                document.getElementById('s1').innerHTML = 'Password Must Contains 8 Chars.'
+            }else{
+            event.preventDefault();
+            const username = document.getElementById("nom").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("motpass").value;
+            localStorage.setItem("nom", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("motpass", password);
+            alert("Inscription réussie!");
+            window.location.href = "imane.html";
+            }
+        }
+        const form = document.getElementById("signup-form");
+
+        form.addEventListener("submit", function(event) {
+            add();
+        });
+
+
+        function showPass(){
+
+            var passInput = document.getElementById('motpass');
+
+            if(passInput.type == 'password'){
+                passInput.type = 'text';
+            }else if(passInput.type == 'text'){
+                passInput.type = 'password';
+            }
+        }
+    </script>
+</body>
+
+</html>
