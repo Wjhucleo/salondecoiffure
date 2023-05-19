@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>S'enregistrer</title>
+</head>
+
+<body>
+          <div class="logo">
+            <img
+              src="C:\Users\mariam\Downloads\1684513451945 (2).png" alt="I&M"/>
+          </div>
+
+    <form id="login-form">
+        <div class="input-field">
+            <label for="email">E-mail :</label>
+            <input id="email" type="email" placeholder="*********@gmail.com" required>
+        </div>
+        <div class="input-field">
+            <label for="motpass">Mot de Passe :</label>
+            <input id="motpass" type="password" placeholder="***************" required>
+        </div>
+        <input type="checkbox" onclick="showPass()"> Show Password
+        <button type="submit">Connecter</button>
+        <a class="retour" href="forum.html">REGISTER</a>
+
+    </form>
+
+    <script>
+        const form = document.getElementById("login-form");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("email").value;
+            const password = document.getElementById("motpass").value;
+            const storedUsername = localStorage.getItem("email");
+            const storedPassword = localStorage.getItem("motpass");
+            if (username === storedUsername && password === storedPassword) {
+                alert("Connexion réussie!");
+                window.location.href = "imane.html";
+            } else {
+                alert("Nom d'utilisateur ou mot de passe incorrect.");
+            }
+        });
+
+        function showPass(){
+
+            var passInput = document.getElementById('motpass');
+
+            if(passInput.type == 'password'){
+                passInput.type = 'text';
+            }else if(passInput.type == 'text'){
+                passInput.type = 'password';
+            }
+        }
+    </script>
+</body>
+
+</html>
