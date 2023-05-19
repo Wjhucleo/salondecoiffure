@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>rendez-vous</title>
+
+    <link rel="stylesheet" href="rdv.css">
+
+
+    </head>
+<body bgcolor="pink">
+   <i><u> <h1><p> Reservez en ligne pour un RDV chez salon Imane.s </p></h1></u></i>
+    <hr>
+
+    <form class="align" >
+<input class="align" type="text" placeholder="nom"> <br>
+<input class="align" type="text" placeholder="prenom"> <br>
+<label class="align" for="email"></label> 
+<input  class="align" id="email" type="email" placeholder="Email"> <br>
+<p> qui souhaiteriez vous vous rendre service  </p>
+<input type="radio" value="Imane S" name="formation"> Imane S <br>
+
+<input type="radio" value="Oumnia T"name="formation">Oumnia T<br>
+<input type="radio" value="Zyad T"name="formation">Zyad T<br>
+<input type="radio" value="Sans preference"name="formation"> sans preference
+
+<p> Heure</p>
+<select >
+<option >11:00</option>
+<option >12:00</option>
+<option >16:00</option>
+<option >17:00</option>
+<option >20:00</option>
+<option >21:00</option>
+
+</select>
+<p> Jour </p>
+
+<select >
+<option >lundi</option>
+<option >mardi</option>
+<option >mercredi</option>
+<option >jeudi</option>
+<option >samedi</option>
+</select>
+<p> Commentaire</p>
+ <textarea name="commentaire" id="" cols="30" rows="10"></textarea> 
+
+    </form>
+
+
+
+
+
+<button class="align" onclick="showAlerts()">
+ <a  href="thank.html" target="blank"> Confirmer</a>
+
+    </button>
+
+
+
+
+  <script>
+
+
+    
+        function showAlerts() {
+          
+           
+          
+            var rep = confirm("a tu rempli tout le formulaire"); // confirmation alert
+            if (rep == true) {
+                alert("You clicked OK.");
+            } else {
+                alert("You clicked Cancel.");
+            }
+        }
+</script>
+
+   
+
+
+      
+  </script>
+
+</body>
+</html>
