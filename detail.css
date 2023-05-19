@@ -1,0 +1,10 @@
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ff8fd0;
+    padding: 100px 100px 100px 100px;
+    border: 9px solid rgb(255, 255, 255);
+  }
+  .ecrit {
+    font-family: fantasy;
+  }
