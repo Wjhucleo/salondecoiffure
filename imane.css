@@ -1,0 +1,32 @@
+button{
+
+    color: blue;
+}
+#ident{
+
+color: deeppink;
+
+}
+.color{
+
+    color: cyan;
+}
+.center{
+
+    text-align: center;
+}
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ff8fd0;
+    padding: 100px 100px 100px 100px;
+    border: 9px solid rgb(255, 255, 255);
+  }
+
+  h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #f50877;
+    text-shadow: 3px 3px 1px white
+    ;
+  }
