@@ -1,0 +1,10 @@
+button {
+    margin-top: 2em;
+    background-color: #0e0e0e;
+    border: none;
+    padding: 1em;
+    color: #FFF;
+    cursor: pointer;
+    transition: 300ms background-color ease;
+    width: 100%;
+}
